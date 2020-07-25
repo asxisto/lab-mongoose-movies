@@ -1,0 +1,17 @@
+<h1>CELEBRITIES</h1>
+
+{{#each celebridades}}
+  <div style="display: flex; align-items: center;">
+      <a href="celebrities/show/{{id}}"><h2>{{name}}</h2></a>
+      <form action="/celebrities/{{id}}/edit">
+        <button style="margin-left: 1.5em;">Edit</button>
+      </form>
+      <form method="POST" action="/celebrities/{{id}}/delete">
+        <button style="margin-left: 1.5em;">Delete</button>
+      </form>
+  </div>
+{{/each}}
+
+<div class="newCeleb">
+  <a href="celebrities/create">Add new Celebrity</a>
+</div>

@@ -1,0 +1,17 @@
+<h1>MOVIES</h1>
+
+{{#each movies}}
+  <div style="display: flex; align-items: center;">
+      <a href="movies/show/{{id}}"><h2>{{title}}</h2></a>
+      <form action="/movies/{{id}}/edit">
+        <button style="margin-left: 1.5em;">Edit</button>
+      </form>
+      <form method="POST" action="/movies/{{id}}/delete">
+        <button style="margin-left: 1.5em;">Delete</button>
+      </form>
+  </div>
+{{/each}}
+
+<div class="newMovie">
+  <a href="movies/create">Add new Movie</a>
+</div>
